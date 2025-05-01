@@ -22,11 +22,9 @@ git clone https://github.com/tu-usuario/tu-repo-backend.git
 cd tu-repo-backend
 ```
 
-2. **Crea entorno virtual e instala dependencias**:
+2. **Instala dependencias**:
 
 ```bash
-python -m venv venv
-source venv/bin/activate  # en Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
@@ -36,7 +34,7 @@ pip install -r requirements.txt
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'ventas_db',
+        'NAME': 'ventas',
         'USER': 'tu_usuario',
         'PASSWORD': 'tu_password',
         'HOST': 'localhost',
@@ -58,16 +56,8 @@ python manage.py migrate
 
 ## 🧪 Crear datos de prueba
 
-Puedes usar el admin de Django para insertar productos, clientes y ventas:
+Ejecuta el SQL de datos prueba dentro de la base de datos llamada ventas.
 
-```bash
-python manage.py createsuperuser
-python manage.py runserver
-```
-
-Accede a: [http://localhost:8000/admin](http://localhost:8000/admin)
-
----
 
 ## 🚀 Ejecutar servidor
 
@@ -83,29 +73,6 @@ http://localhost:8000/graphql
 
 ---
 
-## 📁 Estructura
-
-```
-ventas/
-├── models.py        # Modelos: Product, Customer, Sale
-├── schema.py        # Esquema GraphQL (graphene)
-├── views.py         # No se usa (GraphQL gestiona todo)
-├── admin.py         # Registro de modelos
-└── ...
-```
-
----
-
-## ✅ Funcionalidades
-
-- API GraphQL para consultar:
-  - Ventas totales por mes
-  - Ventas totales por producto
-  - Lista de productos, clientes y ventas
-- Compatible con Apollo Client (frontend)
-- Base de datos MySQL
-
----
 
 ## 🧩 Notas adicionales
 
