@@ -18,7 +18,7 @@ Este es el backend del sistema de estadísticas de ventas, construido con **Djan
 1. **Clona el repositorio y accede a la carpeta del backend**:
 
 ```bash
-git clone https://github.com/tu-usuario/tu-repo-backend.git
+git clone https://github.com/Papo001x/PruebaTecnicaBackRecu.git
 cd tu-repo-backend
 ```
 
